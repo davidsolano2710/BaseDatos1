@@ -1,0 +1,2 @@
+CREATE DATABASE BDTareaProgramada1;
+GO
