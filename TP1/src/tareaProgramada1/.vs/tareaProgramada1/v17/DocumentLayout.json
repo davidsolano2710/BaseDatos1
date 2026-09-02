@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\elite\\BaseDatos1\\TP1\\src\\tareaProgramada1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{71B0F7DB-38C4-4F92-A47B-7FF7E5FBC090}|tareaProgramada1\\tareaProgramada1.csproj|c:\\users\\elite\\basedatos1\\tp1\\src\\tareaprogramada1\\tareaprogramada1\\services\\empleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71B0F7DB-38C4-4F92-A47B-7FF7E5FBC090}|tareaProgramada1\\tareaProgramada1.csproj|solutionrelative:tareaprogramada1\\services\\empleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71B0F7DB-38C4-4F92-A47B-7FF7E5FBC090}|tareaProgramada1\\tareaProgramada1.csproj|c:\\users\\elite\\basedatos1\\tp1\\src\\tareaprogramada1\\tareaprogramada1\\tareaprogramada1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{71B0F7DB-38C4-4F92-A47B-7FF7E5FBC090}|tareaProgramada1\\tareaProgramada1.csproj|solutionrelative:tareaprogramada1\\tareaprogramada1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71B0F7DB-38C4-4F92-A47B-7FF7E5FBC090}|tareaProgramada1\\tareaProgramada1.csproj|c:\\users\\elite\\basedatos1\\tp1\\src\\tareaprogramada1\\tareaprogramada1\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71B0F7DB-38C4-4F92-A47B-7FF7E5FBC090}|tareaProgramada1\\tareaProgramada1.csproj|solutionrelative:tareaprogramada1\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71B0F7DB-38C4-4F92-A47B-7FF7E5FBC090}|tareaProgramada1\\tareaProgramada1.csproj|c:\\users\\elite\\basedatos1\\tp1\\src\\tareaprogramada1\\tareaprogramada1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{71B0F7DB-38C4-4F92-A47B-7FF7E5FBC090}|tareaProgramada1\\tareaProgramada1.csproj|solutionrelative:tareaprogramada1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmpleadoService.cs",
+              "DocumentMoniker": "C:\\Users\\elite\\BaseDatos1\\TP1\\src\\tareaProgramada1\\tareaProgramada1\\Services\\EmpleadoService.cs",
+              "RelativeDocumentMoniker": "tareaProgramada1\\Services\\EmpleadoService.cs",
+              "ToolTip": "C:\\Users\\elite\\BaseDatos1\\TP1\\src\\tareaProgramada1\\tareaProgramada1\\Services\\EmpleadoService.cs",
+              "RelativeToolTip": "tareaProgramada1\\Services\\EmpleadoService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-02T00:39:02.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "tareaProgramada1",
+              "DocumentMoniker": "C:\\Users\\elite\\BaseDatos1\\TP1\\src\\tareaProgramada1\\tareaProgramada1\\tareaProgramada1.csproj",
+              "RelativeDocumentMoniker": "tareaProgramada1\\tareaProgramada1.csproj",
+              "ToolTip": "C:\\Users\\elite\\BaseDatos1\\TP1\\src\\tareaProgramada1\\tareaProgramada1\\tareaProgramada1.csproj",
+              "RelativeToolTip": "tareaProgramada1\\tareaProgramada1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-02T00:37:14.147Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\elite\\BaseDatos1\\TP1\\src\\tareaProgramada1\\tareaProgramada1\\Models\\Empleado.cs",
+              "RelativeDocumentMoniker": "tareaProgramada1\\Models\\Empleado.cs",
+              "ToolTip": "C:\\Users\\elite\\BaseDatos1\\TP1\\src\\tareaProgramada1\\tareaProgramada1\\Models\\Empleado.cs",
+              "RelativeToolTip": "tareaProgramada1\\Models\\Empleado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-02T00:26:57.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\elite\\BaseDatos1\\TP1\\src\\tareaProgramada1\\tareaProgramada1\\appsettings.json",
+              "RelativeDocumentMoniker": "tareaProgramada1\\appsettings.json",
+              "ToolTip": "C:\\Users\\elite\\BaseDatos1\\TP1\\src\\tareaProgramada1\\tareaProgramada1\\appsettings.json",
+              "RelativeToolTip": "tareaProgramada1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-26T05:49:22.61Z",
+              "EditorCaption": ""
             }
           ]
         }
