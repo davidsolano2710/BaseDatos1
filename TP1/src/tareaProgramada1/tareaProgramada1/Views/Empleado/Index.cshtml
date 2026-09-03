@@ -1,0 +1,23 @@
+﻿@model IEnumerable<tareaProgramada1.Models.Empleado>
+
+<h2>Lista de Empleados</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Salario</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.Id</td>
+            <td>@emp.Nombre</td>
+            <td>@emp.Salario</td>
+        </tr>
+    }
+    </tbody>
+</table>
