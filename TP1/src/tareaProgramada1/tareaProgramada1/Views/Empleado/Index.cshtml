@@ -8,10 +8,21 @@
 
 @if (TempData["Exito"] is string mensaje)
 {
-    <div class="alert alert-success" role="status">@mensaje</div>
+    <div class="alert alert-success" role="status">
+        @mensaje
+    </div>
 }
 
-<a asp-controller="Empleado" asp-action="Insertar" class="btn btn-primary mb-3">
+@if (ViewData["ErrorListado"] is string errorListado)
+{
+    <div class="alert alert-danger" role="alert">
+        @errorListado
+    </div>
+}
+
+<a asp-controller="Empleado"
+   asp-action="Insertar"
+   class="btn btn-primary mb-3">
     Insertar Empleado
 </a>
 
@@ -24,14 +35,13 @@
         </tr>
     </thead>
     <tbody>
-    @foreach (var emp in Model)
-    {
-        <tr>
-            <td>@emp.Id</td>
-            <td>@emp.Nombre</td>
-            <td>@emp.Salario</td>
-        </tr>
-    }
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.Id</td>
+                <td>@emp.Nombre</td>
+                <td>@emp.Salario</td>
+            </tr>
+        }
     </tbody>
 </table>
-
