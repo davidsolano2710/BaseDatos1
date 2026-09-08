@@ -1,0 +1,42 @@
+@model tareaProgramada1.Models.InsertarEmpleadoViewModel
+@{
+    ViewData["Title"] = "Insertar Empleado";
+}
+
+<div class="card shadow-sm mx-auto mt-4" style="max-width: 560px;">
+    <div class="card-header text-white py-3"
+         style="background: linear-gradient(110deg, #2588d1, #073d86);">
+        <h1 class="h3 mb-0">Insertar Empleado</h1>
+    </div>
+    <div class="card-body p-4">
+        <form asp-controller="Empleado" asp-action="Insertar" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3" role="alert"></div>
+
+            <div class="mb-4">
+                <label asp-for="Nombre" class="form-label fw-bold">Nombre:</label>
+                <input asp-for="Nombre" class="form-control" autocomplete="name"
+                       aria-describedby="nombreError" />
+                <span asp-validation-for="Nombre" id="nombreError" class="text-danger"></span>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="Salario" class="form-label fw-bold">Salario:</label>
+                <input asp-for="Salario" class="form-control" inputmode="decimal"
+                       aria-describedby="salarioAyuda salarioError" />
+                <div id="salarioAyuda" class="form-text">Ejemplo: 250000.50. Sin comas ni símbolo de moneda.</div>
+                <span asp-validation-for="Salario" id="salarioError" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex justify-content-between border-top pt-3">
+                <button type="submit" class="btn btn-primary">Insertar</button>
+                <a asp-controller="Empleado" asp-action="Index"
+                   class="btn btn-outline-primary">← Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
