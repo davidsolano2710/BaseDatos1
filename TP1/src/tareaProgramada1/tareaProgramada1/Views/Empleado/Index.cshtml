@@ -1,6 +1,19 @@
 ﻿@model IEnumerable<tareaProgramada1.Models.Empleado>
 
+@{
+    ViewData["Title"] = "Lista de Empleados";
+}
+
 <h2>Lista de Empleados</h2>
+
+@if (TempData["Exito"] is string mensaje)
+{
+    <div class="alert alert-success" role="status">@mensaje</div>
+}
+
+<a asp-controller="Empleado" asp-action="Insertar" class="btn btn-primary mb-3">
+    Insertar Empleado
+</a>
 
 <table class="table">
     <thead>
@@ -21,3 +34,4 @@
     }
     </tbody>
 </table>
+

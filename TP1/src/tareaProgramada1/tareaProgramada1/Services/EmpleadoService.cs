@@ -22,7 +22,7 @@ namespace tareaProgramada1.Services
             using (var conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
-                using (var cmd = new SqlCommand("sp_ListarEmpleados", conn))
+                using (var cmd = new SqlCommand("dbo.sp_ListarEmpleados", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     using (var reader = cmd.ExecuteReader())
@@ -42,5 +42,24 @@ namespace tareaProgramada1.Services
 
             return empleados;
         }
+
+        // La aplicación transmite parámetros; las reglas de datos se resuelven en SQL.
+        public int InsertarEmpleado(string nombre, string salario)
+        {
+            using var conn = new SqlConnection(_connectionString);
+            using var cmd = new SqlCommand("dbo.sp_InsertarEmpleado", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@inNombre", SqlDbType.VarChar, -1).Value = nombre;
+            cmd.Parameters.Add("@inSalario", SqlDbType.VarChar, -1).Value = salario;
+
+            var codigo = cmd.Parameters.Add("@outCodigo", SqlDbType.Int);
+            codigo.Direction = ParameterDirection.Output;
+
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            return (int)codigo.Value;
+        }
     }
 }
+
