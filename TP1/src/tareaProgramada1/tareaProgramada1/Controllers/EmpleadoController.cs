@@ -20,7 +20,34 @@ namespace tareaProgramada1.Controllers
 
         public IActionResult Index()
         {
-            return View(_empleadoService.ListarEmpleados());
+            try
+            {
+                var empleados = _empleadoService.ListarEmpleados(
+                    out int codigoResultado);
+
+                if (codigoResultado != 0)
+                {
+                    _logger.LogError(
+                        "El procedimiento de listado devolvió el código {Codigo}.",
+                        codigoResultado);
+
+                    ViewData["ErrorListado"] =
+                        "No se pudo obtener la lista de empleados.";
+                }
+
+                return View(empleados);
+            }
+            catch (SqlException ex)
+            {
+                _logger.LogError(
+                    ex,
+                    "Error de SQL al consultar los empleados.");
+
+                ViewData["ErrorListado"] =
+                    "No se pudo conectar con la base de datos.";
+
+                return View(new List<Empleado>());
+            }
         }
 
         [HttpGet]

@@ -15,30 +15,40 @@ namespace tareaProgramada1.Services
         }
 
         // Método para listar empleados usando el SP
-        public List<Empleado> ListarEmpleados()
+        public List<Empleado> ListarEmpleados(out int codigoResultado)
         {
             var empleados = new List<Empleado>();
 
-            using (var conn = new SqlConnection(_connectionString))
+            using var conn = new SqlConnection(_connectionString);
+            using var cmd = new SqlCommand(
+                "dbo.sp_ListarEmpleados",
+                conn);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            var codigo = cmd.Parameters.Add(
+                "@outCodigo",
+                SqlDbType.Int);
+
+            codigo.Direction = ParameterDirection.Output;
+
+            conn.Open();
+
+            // El parámetro OUTPUT se puede consultar después de cerrar el lector.
+            using (var reader = cmd.ExecuteReader())
             {
-                conn.Open();
-                using (var cmd = new SqlCommand("dbo.sp_ListarEmpleados", conn))
+                while (reader.Read())
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    using (var reader = cmd.ExecuteReader())
+                    empleados.Add(new Empleado
                     {
-                        while (reader.Read())
-                        {
-                            empleados.Add(new Empleado
-                            {
-                                Id = reader.GetInt32(0),
-                                Nombre = reader.GetString(1),
-                                Salario = reader.GetDecimal(2)
-                            });
-                        }
-                    }
+                        Id = reader.GetInt32(0),
+                        Nombre = reader.GetString(1),
+                        Salario = reader.GetDecimal(2)
+                    });
                 }
             }
+
+            codigoResultado = Convert.ToInt32(codigo.Value);
 
             return empleados;
         }
